@@ -27,7 +27,7 @@ Edit slides.md
 ###Generate the html
 
 ~~~~
-$ python main.py slides.md slides
+$ python pydown.py slides.md slides
 ~~~~
 
 or you can install pydown to run it with `pydown`
