@@ -12,8 +12,10 @@ matrix:
       - "3.2"
       - "3.3"
 install:
-    # Install pydown library
+  # Install pydown library
   - pip install -r requirements.txt --use-mirrors
   - pip install -e . --use-mirrors
+  # Install modules for tests
+  - pip install nose --use-mirrors
 script:
-
+ - nosetests 
