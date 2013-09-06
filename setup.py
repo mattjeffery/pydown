@@ -41,6 +41,8 @@ def read(fname):
         content = fp.read()
     return content
 
+requirements = read("requirements.txt").splitlines()
+
 setup(
     name='python-pydown',
     version="0.1.0",
@@ -48,20 +50,20 @@ setup(
     long_description=read("README.md"),
     author='isnowfy',
     url='https://github.com/isnowfy/pydown',
-    packages=find_packages(exclude=('test*', )) + ['templates'],
+    packages=find_packages(exclude=('test*', )),
+    install_requires=requirements,
     license=read("LICENSE.md"),
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
-
     ],
-    py_modules=('main', ),
+    py_modules=('pydown', ),
     include_package_data=True,
     entry_points={
         'console_scripts': [
-            "pydown = main:main"
+            "pydown = pydown:main"
         ]
     },
 )
