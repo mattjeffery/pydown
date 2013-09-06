@@ -45,7 +45,7 @@ requirements = read("requirements.txt").splitlines()
 
 setup(
     name='python-pydown',
-    version="0.1.0",
+    version="0.2.0",
     description='An HTML5 presentation builder written by python',
     long_description=read("README.md"),
     author='isnowfy',
